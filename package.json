@@ -1,0 +1,38 @@
+{
+  "name": "my-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "bot": "tsc && node ./dist/index.js",
+    "dev": "tsc-watch --onCompilationStarted \"ts-purify -s src -d dist\" --onSuccess \"node ./dist/index.js\"",
+    "build": "tsc",
+    "start": "node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Me/MyBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Me/MyBot/issues"
+  },
+  "homepage": "https://github.com/Me/MyBot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^1.6.5",
+    "@sapphire/framework": "^4.5.3",
+    "@sapphire/plugin-subcommands": "^4.2.0",
+    "@sapphire/utilities": "^3.13.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "module-alias": "^2.2.3",
+    "mongoose": "^7.4.4",
+    "typescript": "^5.2.2"
+  },
+  "_moduleAliases": {
+    "@util": "dist/util",
+    "@schemas": "dist/schemas"
+  }
+}
